@@ -5,5 +5,5 @@
 5. La operación push agrega un nuevo elemento al tope de la pila actual y genera una nueva versión.
 6. La operación pop elimina el tope de la pila actual (si no está vacía) y genera una nueva versión.
 7. Las versiones anteriores no se modifican al realizar nuevas operaciones (excepto si se borra explícitamente una versión).
-8. En P(a), es posible borrar una versión arbitraria con borrarVersion(int), excepto si el índice es inválido.
+8. Es posible borrar una versión arbitraria con borrarVersion(int), siempre que el índice sea válido.
 9. Si se borra la versión actual, el sistema actualiza automáticamente versionActual a la última versión válida.

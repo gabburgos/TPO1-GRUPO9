@@ -1,72 +1,60 @@
+/*
 package org.example.ejercicio6;
+
 
 
 import org.example.ejercicio5.Tuple;
 
-public class Relation {
+public class Relacion {
     private Tuple[] filas;
     private int cantidad;
 
-    /**
-     * Crea una relación vacía con capacidad inicial.
-     * Precondición: capacidad > 0.
-     * Postcondición: se reserva espacio para futuras tuplas.
-     * Estrategia: inicializa arreglo de tuplas y contador.
-     */
-    public Relation(int capacidadInicial) {
-        if (capacidadInicial <= 0) throw new IllegalArgumentException("Capacidad inválida");
-        filas = new Tuple[capacidadInicial];
+    // Precondición: capacidadInicial > 0
+    // Postcondición: crea una relación vacía con espacio reservado
+    public Relacion(int capacidadInicial) {
+        if (capacidadInicial <= 0)
+            throw new RuntimeException("Capacidad inválida");
+        filas = new Tupla[capacidadInicial];
         cantidad = 0;
     }
 
-    /**
-     * Agrega una tupla a la relación.
-     * Precondición: t no es null y debe tener el mismo tamaño que las otras tuplas (si ya hay).
-     * Postcondición: la tupla se agrega al final de la relación.
-     * Estrategia: verificar compatibilidad y agregar; redimensionar si es necesario.
-     */
-    public void agregar(Tuple t) {
-        if (t == null) throw new IllegalArgumentException("Tupla nula");
-        if (cantidad > 0 && t.size() != filas[0].size()) {
-            throw new IllegalArgumentException("Tupla incompatible");
-        }
-        if (cantidad == filas.length) {
-            redimensionar();
-        }
-        filas[cantidad++] = t;
+    // Precondición: la tupla no es nula y tiene el mismo tamaño que las ya agregadas (si existen)
+    // Postcondición: agrega una tupla a la relación
+    public void agregar(Tupla t) {
+        if (t == null)
+            throw new RuntimeException("Tupla nula");
+        if (cantidad > 0 && t.tamanio() != filas[0].tamanio())
+            throw new RuntimeException("Tupla incompatible");
+
+        if (cantidad == filas.length) redimensionar();
+        filas[cantidad] = t;
+        cantidad++;
     }
 
-    /**
-     * Devuelve la cantidad de tuplas en la relación.
-     * Precondición: ninguna.
-     * Postcondición: no modifica el estado.
-     */
+    // Precondición: -
+    // Postcondición: devuelve cuántas tuplas tiene la relación
     public int cantidadFilas() {
         return cantidad;
     }
 
-    /**
-     * Devuelve una representación en cadena de la relación.
-     * Precondición: ninguna.
-     * Postcondición: no modifica el estado.
-     */
-    @Override
+    // Precondición: -
+    // Postcondición: devuelve una cadena con todas las tuplas
     public String toString() {
-        StringBuilder sb = new StringBuilder("[");
+        String r = "[";
         for (int i = 0; i < cantidad; i++) {
-            sb.append(filas[i]);
-            if (i < cantidad - 1) sb.append(", ");
+            r += filas[i];
+            if (i < cantidad - 1) r += ", ";
         }
-        sb.append("]");
-        return sb.toString();
+        return r + "]";
     }
 
-    // Método privado para agrandar el arreglo
+    // Redimensiona el arreglo al doble de tamaño
     private void redimensionar() {
-        Tuple[] nuevo = new Tuple[filas.length * 2];
+        Tupla[] nuevo = new Tupla[filas.length * 2];
         for (int i = 0; i < filas.length; i++) {
             nuevo[i] = filas[i];
         }
         filas = nuevo;
     }
 }
+ */
