@@ -1,0 +1,9 @@
+1. La estructura contiene un arreglo de versiones, donde cada versión es una copia del estado completo de la pila en ese momento.
+2. El arreglo de versiones comienza con tamaño 1, y se agranda dinámicamente al agregar nuevas versiones (push/pop).
+3. La versión actual es un índice válido dentro del arreglo de versiones: 0 <= versionActual < versiones.length.
+4. Cada versión es un arreglo de enteros, nunca null.
+5. La operación push agrega un nuevo elemento al tope de la pila actual y genera una nueva versión.
+6. La operación pop elimina el tope de la pila actual (si no está vacía) y genera una nueva versión.
+7. Las versiones anteriores no se modifican al realizar nuevas operaciones (excepto si se borra explícitamente una versión).
+8. En P(a), es posible borrar una versión arbitraria con borrarVersion(int), excepto si el índice es inválido.
+9. Si se borra la versión actual, el sistema actualiza automáticamente versionActual a la última versión válida.
