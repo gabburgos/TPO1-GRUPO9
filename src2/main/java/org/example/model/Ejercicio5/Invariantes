@@ -1,0 +1,6 @@
+Invariantes
+x, y y z son enteros.
+
+Una coordenada siempre tiene sus 3 componentes definidas.
+
+No se permiten componentes nulas.
