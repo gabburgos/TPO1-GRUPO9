@@ -80,7 +80,7 @@ public class VersionedStack {
         return versiones[versionActual].length;
     }
 
-    // === Método auxiliar ===
+    // Método auxiliar
     private void agregarVersion(int[] nueva) {
         int[][] nuevo = new int[cantidadVersiones + 1][];
         for (int i = 0; i < cantidadVersiones; i++) {
@@ -91,4 +91,4 @@ public class VersionedStack {
         versionActual = cantidadVersiones;
         cantidadVersiones++;
     }
-}
+} 
