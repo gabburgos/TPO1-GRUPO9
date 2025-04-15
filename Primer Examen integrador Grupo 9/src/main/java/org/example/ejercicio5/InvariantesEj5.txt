@@ -1,0 +1,2 @@
+1. La coordenada siempre tiene exactamente 3 componentes (x, y, z)
+2. Las componentes no cambian una vez creadas

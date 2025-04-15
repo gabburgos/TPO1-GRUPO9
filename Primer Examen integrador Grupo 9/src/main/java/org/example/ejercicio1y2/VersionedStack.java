@@ -30,7 +30,7 @@ public class VersionedStack {
 
     // Precondición: la pila actual no está vacía
     // Postcondición: desapila el tope y genera una nueva versión
-    // Estrategia: se copia todo menos el último elemento
+    // Estrategia: se copia todo menos el ultimo elemento
     public void desapilar() {
         int[] actual = versiones[versionActual];
         if (actual.length == 0) throw new RuntimeException("Pila vacía");
