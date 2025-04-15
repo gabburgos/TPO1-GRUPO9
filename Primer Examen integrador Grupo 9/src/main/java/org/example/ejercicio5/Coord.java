@@ -23,6 +23,10 @@ public class Coord {
         return componentes[i];
     }
 
+    public boolean estaEnPrimerOctante() {
+        return componentes[0] >= 0 && componentes[1] >= 0 && componentes[2] >= 0;
+    }
+
     // Precondición: -
     // Postcondición: devuelve la coordenada como string
     public String toString() {
